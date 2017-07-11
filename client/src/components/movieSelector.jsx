@@ -12,9 +12,14 @@ class MovieSelector extends React.Component {
     this.setState({search: event.target.value})
   }
 
+  handleSubmit(event){
+    event.preventDefault();
+    this.props.onSearch(this.state.search);
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit.bind(this)}>
         <input type="text" placeholder="Search for actor" onChange={this.handleChange.bind(this)}></input>
       </form>
     )
