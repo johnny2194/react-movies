@@ -4,6 +4,11 @@ import MovieDetails from './movieDetails'
 
 class MovieContainer extends React.Component {
 
+  componentDidMount() {
+    // const request = new XMLHttpRequest();
+    // request.open("GET", )
+  }
+
   render() {
     return (
     <div>
